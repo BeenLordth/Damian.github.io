@@ -42,13 +42,19 @@ body {
 /* Home Section */
 .home {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: row; /* Two columns */
+    text-align: left; /* Align text to the left */
     padding: 3rem 2rem;
+    gap: 2rem; /* Space between columns */
 }
 
 .intro {
-    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .intro h1 {
@@ -77,12 +83,28 @@ body {
     background-color: #01579b;
 }
 
+@media (max-width: 600px) {
+    .home {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align for small screens */
+    }
+
+    .intro {
+        gap: 1rem;
+    }
+
+    .profile-img {
+        margin: 1rem 0; /* Add spacing around the image */
+    }
+}
+
 /* Profile Image */
 .profile-img {
     width: 300px;
     height: auto;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0; 
 }
 
 /* Skills Section */
@@ -380,3 +402,4 @@ body {
         display: block;
     }
 }
+
